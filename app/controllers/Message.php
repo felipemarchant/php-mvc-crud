@@ -40,10 +40,10 @@ class Message extends Controller{
     public function edit($id) {
         $this->setTitle('Update Message');
         $message = $this->message->one($id);
-        if($message) {
-            $this->view('message/index', array( 'message' => $message, 'messages' => $this->getMessages() )); 
+        if(!$message) {
+            redirect('message/index');
         }
-        redirect('message/index');
+        $this->view('message/index', array( 'message' => $message, 'messages' => $this->getMessages() )); 
     }
     public function index() {
         $this->setTitle('Dash Message');

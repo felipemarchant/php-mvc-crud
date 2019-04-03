@@ -8,7 +8,7 @@
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
   // URL Root
-  define('URLROOT', 'http://192.168.0.18/mvc_scaffold');
+  define('URLROOT', 'http://localhost/mvc_scaffold');
   // Site Name
   define('SITENAME', 'MVC Crud');
   // App Version
